@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
+} */
+
+body{
+    background-image: 
+        linear-gradient(
+            to bottom right, #bdbdbd, #c7c7c7
+        );
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 20px;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+}
+
+.nav-links a:hover {
+    color: #3d3d3db6;
+}
+
+.social-icons {
+  display: flex;
+
+  a {
+    margin-right: 10px;
+  }
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+/* página logo */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: auto;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+}
+
+/* apresentação */
+.container {
+    display: flex;
+    height: calc(100vh - 300px);
+}
+
+.image-section {
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fw-light {
+        margin-top: 0;
+        margin-bottom: .5em;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    h1, .h1 {
+        font-size: 3.5rem;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+
+    .logo img {
+        height: 40px;
+    }
+
+    .navigation a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #666;
+    }
+
+    .social-media a {
+        margin: 0 10px;
+    }
+
+    .social-media img {
+        height: 30px;
+    }
+}
+
+/* CARROSSEL */
+.carousel {
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px; 
+    margin-right: 20px;
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    }
+}
+
+.card-content {
+    padding: 15px;
+
+    h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    p {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #666;
+    }
+}
+
+/* CONTATO */
+.contato {
+    max-width: 100vw;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 90px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+    }
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
